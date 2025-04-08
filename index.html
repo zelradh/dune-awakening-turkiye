@@ -248,13 +248,29 @@
 
         footer {
             text-align: center;
-            padding: 0.2rem;
+            padding: 0.5rem;
             background-color: var(--primary-color);
             color: white;
             height: 5vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        footer p {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        footer p::before,
+        footer p::after {
+            content: "•";
+            color: var(--secondary-color);
+            font-size: 1.2rem;
         }
     </style>
 </head>
@@ -320,8 +336,12 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Dune: Awakening Türkiye. Tüm hakları saklıdır.</p>
+            <p>© <span id="year"></span> Dune: Awakening Türkiye | Tüm Hakları Saklıdır</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
