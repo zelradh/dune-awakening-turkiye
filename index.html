@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dune: Awakening Türkiye Discord Sunucusu | Resmi Türk Topluluğu</title>
+    
+    <!-- SEO Meta Etiketleri -->
+    <meta name="description" content="Dune: Awakening'in en büyük Türk topluluğuna katılın! Oyun hakkında bilgi alın, diğer oyuncularla tanışın ve Dune evrenini keşfedin.">
+    <meta name="keywords" content="Dune Awakening, Dune Türkiye, Dune Discord, Dune Türk Topluluğu, Dune Oyun, Dune: Awakening Türkiye">
+    <meta name="author" content="Dune: Awakening Türkiye">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Etiketleri -->
+    <meta property="og:title" content="Dune: Awakening Türkiye Discord Sunucusu">
+    <meta property="og:description" content="Dune: Awakening'in en büyük Türk topluluğuna katılın! Oyun hakkında bilgi alın, diğer oyuncularla tanışın ve Dune evrenini keşfedin.">
+    <meta property="og:image" content="https://duneawakening.com/images/desert.svg">
+    <meta property="og:url" content="https://duneawakening.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Etiketleri -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dune: Awakening Türkiye Discord Sunucusu">
+    <meta name="twitter:description" content="Dune: Awakening'in en büyük Türk topluluğuna katılın!">
+    <meta name="twitter:image" content="https://duneawakening.com/images/desert.svg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://duneawakening.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/desert.svg">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #D4A373;
+            --secondary-color: #E9C46A;
+            --background-color: #FEFAE0;
+            --text-color: #2A2A2A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            text-align: center;
+            padding: 0.5rem 0;
+            background: url('./images/desert.svg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+        }
+
+        /* Kum tepeleri için */
+        /* header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: 
+                linear-gradient(45deg, transparent 25%, #e94560 25%),
+                linear-gradient(-45deg, transparent 25%, #e94560 25%),
+                linear-gradient(45deg, #e94560 25%, transparent 25%),
+                linear-gradient(-45deg, #e94560 25%, transparent 25%);
+            background-size: 100px 100px;
+            background-position: 0 0, 0 50px, 50px -50px, -50px 0px;
+            opacity: 0.5;
+        } */
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            padding: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .header-content p {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .discord-button {
+            display: inline-block;
+            background-color: #7289DA;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .discord-button:hover {
+            background-color: white;
+            color: #7289DA;
+            transform: translateY(-1px);
+            box-shadow: 0 5px 7px rgba(0,0,0,0.25);
+        }
+
+        .discord-button:hover i {
+            color: #7289DA;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: var(--secondary-color);
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            padding: 0;
+            min-height: 55vh;
+        }
+
+        .features {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+            width: 100%;
+            margin: 0;
+            padding: 0.3rem 0;
+            height: 100%;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin: 0;
+            padding: 0.3rem 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.25rem;
+            width: 98%;
+            padding: 0.15rem;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background-color: white;
+            padding: 0.6rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0.15rem;
+            max-width: 98%;
+        }
+
+        .feature-card:hover {
+            background-color: var(--primary-color);
+        }
+
+        .feature-card:hover i {
+            color: white;
+        }
+
+        .feature-card:hover h3,
+        .feature-card:hover p {
+            color: var(--text-color);
+            filter: brightness(1.2);
+            text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+        }
+
+        .feature-card i {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.4rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.4rem;
+            color: var(--text-color);
+        }
+
+        .feature-card p {
+            font-size: 1.1rem;
+            line-height: 1.3;
+            color: var(--text-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 0.2rem;
+            background-color: var(--primary-color);
+            color: white;
+            height: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="cactus"></div>
+        <div class="cactus"></div>
+        <div class="cactus"></div>
+        <div class="container header-content">
+            <h1>Dune: Awakening Türkiye</h1>
+            <p>Dune evreninin en büyük Türk topluluğuna katılın! Oyun hakkında bilgi alın, diğer oyuncularla tanışın ve Dune evrenini keşfedin.</p>
+            <a href="https://discord.gg/SGgyyQGdvv" class="discord-button" target="_blank">
+                <i class="fab fa-discord"></i> Discord Sunucumuza Katılın
+            </a>
+            <div class="social-links">
+                <a href="https://x.com/dune_awakening" class="social-link" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://bsky.app/profile/dune-awakening-tr.bsky.social" class="social-link" target="_blank">
+                    <i class="fa-brands fa-bluesky"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="features">
+            <h2>Neden Bize Katılmalısınız?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>🛡️ Fremen Ruhlu</h3>
+                    <p>Çölün zorlu koşullarına göğüs geren, dayanıklı ve kararlı bir topluluk</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>🧠 Lore Meraklısı</h3>
+                    <p>Dune evreninin derinliklerine inen, hikayeleri ve sırları keşfeden bir topluluk</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-dragon"></i>
+                    <h3>🐛 Shai-Hulud'un Çağrısı</h3>
+                    <p>Kum solucanlarının dansını izleyen, Arrakis'in sırlarını çözen maceracılar</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>🤝 Topluluk Odaklı</h3>
+                    <p>Birlikte büyüyen, paylaşan ve destek olan bir aile</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-fist-raised"></i>
+                    <h3>⚔️ Hazır ve Kararlı</h3>
+                    <p>Dune: Awakening'in zorlu dünyasına hazır, savaşçı ruhlu oyuncular</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-gem"></i>
+                    <h3>🌶️ Baharat Avcıları</h3>
+                    <p>Melange'ın gücünü arayan, Arrakis'in değerli kaynaklarını keşfeden kaşifler</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dune: Awakening Türkiye. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+</body>
+</html>
