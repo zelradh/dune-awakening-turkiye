@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Sitemap: https://zelradh.github.io/dune-awakening-turkiye/sitemap.xml
