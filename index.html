@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dune: Awakening Türkiye | Resmi Türk Topluluğu</title>
     
     <!-- SEO Meta Etiketleri -->
@@ -28,11 +28,11 @@
     <link rel="canonical" href="https://duneawakening.com.tr">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.ico">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <style>
+  <style>
         :root {
             --primary-color: #D4A373;
             --secondary-color: #E9C46A;
@@ -47,7 +47,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        body {
+    body {
             background-color: var(--background-color);
             color: var(--text-color);
             line-height: 1.6;
@@ -120,28 +120,46 @@
             margin-bottom: 1rem;
         }
 
-        .discord-button {
-            display: inline-block;
-            background-color: #7289DA;
-            color: white;
-            padding: 0.8rem 1.5rem;
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .button {
+            padding: 0.5rem 1rem;
             border-radius: 5px;
             text-decoration: none;
+            color: white;
             font-weight: bold;
-            margin: 1rem 0;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            text-align: center;
+            border: 2px solid transparent;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .discord-button {
+            background-color: #7289DA;
+            color: white;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
         }
 
         .discord-button:hover {
             background-color: white;
             color: #7289DA;
-            transform: translateY(-1px);
-            box-shadow: 0 5px 7px rgba(0,0,0,0.25);
+            transform: scale(1.05);
         }
 
-        .discord-button:hover i {
-            color: #7289DA;
+        .forum-button {
+            background-color: #D4A373;
+            color: white;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+
+        .forum-button:hover {
+            background-color: white;
+            color: #D4A373;
+            transform: scale(1.05);
         }
 
         .social-links {
@@ -184,7 +202,7 @@
             text-align: center;
             font-size: 2.2rem;
             color: var(--primary-color);
-            margin: 0;
+      margin: 0;
             padding: 0.3rem 0;
         }
 
@@ -218,7 +236,7 @@
         }
 
         .feature-card:hover i {
-            color: white;
+      color: white;
         }
 
         .feature-card:hover h3,
@@ -247,7 +265,7 @@
         }
 
         footer {
-            text-align: center;
+      text-align: center;
             padding: 0.5rem;
             background-color: var(--primary-color);
             color: white;
@@ -280,7 +298,7 @@
                 height: 100%;
             }
 
-            header {
+    header {
                 position: relative;
                 height: auto;
                 padding: 2rem 1rem;
@@ -315,7 +333,6 @@
 
             .discord-button {
                 display: block;
-                width: 100%;
                 text-align: center;
                 margin: 1rem 0;
             }
@@ -352,8 +369,8 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                text-align: center;
-            }
+      text-align: center;
+    }
 
             footer p {
                 display: flex;
@@ -365,6 +382,11 @@
             footer p::before,
             footer p::after {
                 display: none;
+            }
+
+            .button-container {
+                flex-direction: column;
+                align-items: center;
             }
         }
 
@@ -402,17 +424,22 @@
             .feature-card p {
                 font-size: 0.95rem;
             }
-        }
-    </style>
+    }
+  </style>
 </head>
 <body>
-    <header>
+  <header>
         <div class="container header-content">
-            <h1>Dune: Awakening Türkiye</h1>
+    <h1>Dune: Awakening Türkiye</h1>
             <p>Dune evreninin en büyük Türk topluluğuna katılın! Oyun hakkında bilgi alın, diğer oyuncularla tanışın ve Dune evrenini keşfedin.</p>
-            <a href="https://discord.gg/SGgyyQGdvv" class="discord-button" target="_blank">
-                <i class="fab fa-discord"></i> Discord Sunucumuza Katılın
-            </a>
+            <div class="button-container">
+                <a href="https://discord.gg/SGgyyQGdvv" class="button discord-button" target="_blank">
+                    <i class="fab fa-discord"></i> Discord Sunucumuza Katılın
+                </a>
+                <a href="https://forum.duneawakening.com.tr" class="button forum-button">
+                    <i class="fas fa-comments"></i> Forum Tartışmalarına Katılın
+                </a>
+            </div>
             <div class="social-links">
                 <a href="https://x.com/dune_awakening" class="social-link" target="_blank">
                     <i class="fab fa-twitter"></i>
@@ -422,7 +449,7 @@
                 </a>
             </div>
         </div>
-    </header>
+  </header>
 
     <main class="container">
         <section class="features">
@@ -460,7 +487,7 @@
                 </div>
             </div>
         </section>
-    </main>
+  </main>
 
     <footer>
         <div class="container">
@@ -468,8 +495,8 @@
                 <span>2025 © </span>
                 <span>Dune: Awakening Türkiye | Tüm Hakları Saklıdır</span>
             </p>
-        </div>
-    </footer>
+  </div>
+  </footer>
 
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
