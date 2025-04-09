@@ -265,7 +265,7 @@
         }
 
         footer {
-      text-align: center;
+            text-align: center;
             padding: 0.5rem;
             background-color: var(--primary-color);
             color: white;
@@ -288,6 +288,16 @@
             content: "•";
             color: var(--secondary-color);
             font-size: 1.2rem;
+        }
+
+        footer a {
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #4B3D2A;
         }
 
         /* Mobil cihazlar için medya sorgusu */
@@ -491,12 +501,9 @@
 
     <footer>
         <div class="container">
-            <p>
-                <span>2025 © </span>
-                <span>Dune: Awakening Türkiye | Tüm Hakları Saklıdır</span>
-            </p>
-  </div>
-  </footer>
+            <p>© 2025 Dune: Awakening Türkiye | Tüm Hakları Saklıdır | İletişim: <a href="mailto:iletisim@duneawakening.com.tr">iletisim@duneawakening.com.tr</a></p>
+        </div>
+    </footer>
 
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
