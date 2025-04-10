@@ -27,10 +27,29 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://duneawakening.com.tr">
     
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#D4A373">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="images/favicon-128x128.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="images/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="images/favicon-256x256.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512x512.png">
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- Apple cihazlar için tek bir apple-touch-icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180x180.png">
+    <meta name="apple-mobile-web-app-title" content="Dune: Awakening Türkiye">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
   <style>
@@ -266,29 +285,23 @@
         }
 
         footer {
-      text-align: center;
+            text-align: center;
             padding: 0.5rem;
             background-color: var(--primary-color);
             color: white;
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             align-items: center;
-            justify-content: center;
+            justify-items: center;
             font-size: 0.95rem;
             letter-spacing: 0.5px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
 
         footer p {
-            display: flex;
-            align-items: center;
+            display: contents;
             gap: 0.35rem;
-        }
-
-        footer p::before,
-        footer p::after {
-            content: "•";
-            color: var(--secondary-color);
-            font-size: 1.2rem;
+            white-space: nowrap;
         }
 
         footer a {
@@ -375,24 +388,15 @@
 
             footer {
                 padding: 1rem;
-                height: auto;
-                display: flex;
-                flex-direction: column;
+                display: grid;
+                grid-template-columns: 1fr;
                 align-items: center;
-                justify-content: center;
-      text-align: center;
-    }
-
-            footer p {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 0.35rem;
+                justify-items: center;
             }
 
-            footer p::before,
-            footer p::after {
-                display: none;
+            footer p {
+                flex-direction: column;
+                white-space: normal;
             }
 
             .button-container {
@@ -435,6 +439,10 @@
             .feature-card p {
                 font-size: 0.95rem;
             }
+    }
+
+    #year {
+        display: inline; /* Yıl span'ını satır içi yap */
     }
   </style>
 </head>
@@ -502,12 +510,21 @@
 
     <footer>
         <div class="container">
-            <p>© 2025 Dune: Awakening Türkiye | Tüm Hakları Saklıdır | İletişim: <a href="mailto:iletisim@duneawakening.com.tr">iletisim@duneawakening.com.tr</a></p>
-  </div>
-  </footer>
+            <p>
+                <span id="year"></span>
+                <span>©</span>
+                <span>Dune: Awakening Türkiye | Tüm Hakları Saklıdır |</span>
+                <span>İletişim: <a href="mailto:iletisim@duneawakening.com.tr">iletisim@duneawakening.com.tr</a></span>
+            </p>
+        </div>
+    </footer>
 
     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
+        document.addEventListener("DOMContentLoaded", function() {
+            const yearSpan = document.getElementById("year");
+            const currentYear = new Date().getFullYear();
+            yearSpan.textContent = currentYear; // Yılı span içine ekle
+        });
     </script>
 </body>
 </html>
